@@ -8,6 +8,7 @@ target 'Anycipe' do
   pod 'Alamofire'
   pod 'RealmSwift'
   pod 'SwiftyJSON'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   target 'AnycipeTests' do
     inherit! :search_paths
