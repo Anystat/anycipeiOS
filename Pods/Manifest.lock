@@ -3,6 +3,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - MGSwipeTableCell (1.5.6)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - MGSwipeTableCell
   - RealmSwift
   - SwiftyJSON
 
@@ -28,10 +30,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: b6c28ccaffd956f343ea5a8acfdeeae444a40766
+PODFILE CHECKSUM: 5e44942ee80a783788df21f96fb595d514e877c2
 
 COCOAPODS: 1.1.1

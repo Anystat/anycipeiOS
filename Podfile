@@ -9,6 +9,7 @@ target 'Anycipe' do
   pod 'RealmSwift'
   pod 'SwiftyJSON'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'MGSwipeTableCell'
 
   target 'AnycipeTests' do
     inherit! :search_paths
