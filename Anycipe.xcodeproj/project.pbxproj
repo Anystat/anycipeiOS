@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448BBD6A1D8FAA01F924CBD6 /* Pods_AnycipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC0091232684AE1141E07B /* Pods_AnycipeTests.framework */; };
+		9F97C882CBD87C076CDD8914 /* Pods_Anycipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7719DCA58DAAD65060E09139 /* Pods_Anycipe.framework */; };
 		D82950AA1DD0FB0200B8AEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950A91DD0FB0200B8AEA1 /* AppDelegate.swift */; };
 		D82950AC1DD0FB0200B8AEA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950AB1DD0FB0200B8AEA1 /* ViewController.swift */; };
 		D82950AF1DD0FB0200B8AEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82950AD1DD0FB0200B8AEA1 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		D82950B71DD0FB0200B8AEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82950B51DD0FB0200B8AEA1 /* LaunchScreen.storyboard */; };
 		D82950C21DD0FB0200B8AEA1 /* AnycipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950C11DD0FB0200B8AEA1 /* AnycipeTests.swift */; };
 		D82950CD1DD0FB0200B8AEA1 /* AnycipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950CC1DD0FB0200B8AEA1 /* AnycipeUITests.swift */; };
+		E1752BC1E050B3460D321F58 /* Pods_AnycipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		464423BA808BCFA7C236B4E1 /* Pods-AnycipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		49705053AD4293B75C86CC72 /* Pods-Anycipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anycipe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe.release.xcconfig"; sourceTree = "<group>"; };
+		7719DCA58DAAD65060E09139 /* Pods_Anycipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anycipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97221B3DAA2D4398896C006D /* Pods-AnycipeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeTests/Pods-AnycipeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CDC0091232684AE1141E07B /* Pods_AnycipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnycipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74616911B4488A3BF6D9C4B /* Pods-AnycipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeTests/Pods-AnycipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D82950A61DD0FB0200B8AEA1 /* Anycipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anycipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82950A91DD0FB0200B8AEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D82950AB1DD0FB0200B8AEA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		D82950C81DD0FB0200B8AEA1 /* AnycipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnycipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82950CC1DD0FB0200B8AEA1 /* AnycipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnycipeUITests.swift; sourceTree = "<group>"; };
 		D82950CE1DD0FB0200B8AEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2BFD0AD1B3A7A6DE7040096 /* Pods-Anycipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anycipe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe.debug.xcconfig"; sourceTree = "<group>"; };
+		F9DA3E228B5C9829C9BD6E0F /* Pods-AnycipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnycipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F97C882CBD87C076CDD8914 /* Pods_Anycipe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448BBD6A1D8FAA01F924CBD6 /* Pods_AnycipeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1752BC1E050B3460D321F58 /* Pods_AnycipeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2DBB6FA84EDD6AFE10DA624 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2BFD0AD1B3A7A6DE7040096 /* Pods-Anycipe.debug.xcconfig */,
+				49705053AD4293B75C86CC72 /* Pods-Anycipe.release.xcconfig */,
+				97221B3DAA2D4398896C006D /* Pods-AnycipeTests.debug.xcconfig */,
+				C74616911B4488A3BF6D9C4B /* Pods-AnycipeTests.release.xcconfig */,
+				F9DA3E228B5C9829C9BD6E0F /* Pods-AnycipeUITests.debug.xcconfig */,
+				464423BA808BCFA7C236B4E1 /* Pods-AnycipeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D829509D1DD0FB0200B8AEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				D82950C01DD0FB0200B8AEA1 /* AnycipeTests */,
 				D82950CB1DD0FB0200B8AEA1 /* AnycipeUITests */,
 				D82950A71DD0FB0200B8AEA1 /* Products */,
+				C2DBB6FA84EDD6AFE10DA624 /* Pods */,
+				F84F25124BB3A429696F7A50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +182,16 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		F84F25124BB3A429696F7A50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7719DCA58DAAD65060E09139 /* Pods_Anycipe.framework */,
+				9CDC0091232684AE1141E07B /* Pods_AnycipeTests.framework */,
+				FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D82950D11DD0FB0200B8AEA1 /* Build configuration list for PBXNativeTarget "Anycipe" */;
 			buildPhases = (
+				BD277E297E64E653C762018B /* [CP] Check Pods Manifest.lock */,
 				D82950A21DD0FB0200B8AEA1 /* Sources */,
 				D82950A31DD0FB0200B8AEA1 /* Frameworks */,
 				D82950A41DD0FB0200B8AEA1 /* Resources */,
+				F3A1813D80EF658D6C78AEC0 /* [CP] Embed Pods Frameworks */,
+				C6A971499F7161516379E3BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D82950D41DD0FB0200B8AEA1 /* Build configuration list for PBXNativeTarget "AnycipeTests" */;
 			buildPhases = (
+				EA48E2A60F0A5E56021407CC /* [CP] Check Pods Manifest.lock */,
 				D82950B91DD0FB0200B8AEA1 /* Sources */,
 				D82950BA1DD0FB0200B8AEA1 /* Frameworks */,
 				D82950BB1DD0FB0200B8AEA1 /* Resources */,
+				8067648DBDB9B88CE2FFF967 /* [CP] Embed Pods Frameworks */,
+				F901BDB490452FDA8651BB37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D82950D71DD0FB0200B8AEA1 /* Build configuration list for PBXNativeTarget "AnycipeUITests" */;
 			buildPhases = (
+				6E2A8A25E6BD56171B423408 /* [CP] Check Pods Manifest.lock */,
 				D82950C41DD0FB0200B8AEA1 /* Sources */,
 				D82950C51DD0FB0200B8AEA1 /* Frameworks */,
 				D82950C61DD0FB0200B8AEA1 /* Resources */,
+				4B8D905AF3EA221A42018E39 /* [CP] Embed Pods Frameworks */,
+				F06B7D7769DA468C10435A70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +332,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B8D905AF3EA221A42018E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2A8A25E6BD56171B423408 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8067648DBDB9B88CE2FFF967 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnycipeTests/Pods-AnycipeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD277E297E64E653C762018B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A971499F7161516379E3BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA48E2A60F0A5E56021407CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F06B7D7769DA468C10435A70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3A1813D80EF658D6C78AEC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F901BDB490452FDA8651BB37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnycipeTests/Pods-AnycipeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D82950A21DD0FB0200B8AEA1 /* Sources */ = {
@@ -441,6 +628,7 @@
 		};
 		D82950D21DD0FB0200B8AEA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2BFD0AD1B3A7A6DE7040096 /* Pods-Anycipe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CWAYCQ9J7;
@@ -454,6 +642,7 @@
 		};
 		D82950D31DD0FB0200B8AEA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49705053AD4293B75C86CC72 /* Pods-Anycipe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CWAYCQ9J7;
@@ -467,6 +656,7 @@
 		};
 		D82950D51DD0FB0200B8AEA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97221B3DAA2D4398896C006D /* Pods-AnycipeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +672,7 @@
 		};
 		D82950D61DD0FB0200B8AEA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74616911B4488A3BF6D9C4B /* Pods-AnycipeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +688,7 @@
 		};
 		D82950D81DD0FB0200B8AEA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DA3E228B5C9829C9BD6E0F /* Pods-AnycipeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8CWAYCQ9J7;
@@ -511,6 +703,7 @@
 		};
 		D82950D91DD0FB0200B8AEA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464423BA808BCFA7C236B4E1 /* Pods-AnycipeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8CWAYCQ9J7;
@@ -542,6 +735,7 @@
 				D82950D31DD0FB0200B8AEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D82950D41DD0FB0200B8AEA1 /* Build configuration list for PBXNativeTarget "AnycipeTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +744,7 @@
 				D82950D61DD0FB0200B8AEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D82950D71DD0FB0200B8AEA1 /* Build configuration list for PBXNativeTarget "AnycipeUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +753,7 @@
 				D82950D91DD0FB0200B8AEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
