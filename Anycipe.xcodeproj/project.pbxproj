@@ -10,7 +10,6 @@
 		448BBD6A1D8FAA01F924CBD6 /* Pods_AnycipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC0091232684AE1141E07B /* Pods_AnycipeTests.framework */; };
 		9F97C882CBD87C076CDD8914 /* Pods_Anycipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7719DCA58DAAD65060E09139 /* Pods_Anycipe.framework */; };
 		D82950AA1DD0FB0200B8AEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950A91DD0FB0200B8AEA1 /* AppDelegate.swift */; };
-		D82950AC1DD0FB0200B8AEA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82950AB1DD0FB0200B8AEA1 /* ViewController.swift */; };
 		D82950AF1DD0FB0200B8AEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82950AD1DD0FB0200B8AEA1 /* Main.storyboard */; };
 		D82950B21DD0FB0200B8AEA1 /* Anycipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D82950B01DD0FB0200B8AEA1 /* Anycipe.xcdatamodeld */; };
 		D82950B41DD0FB0200B8AEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82950B31DD0FB0200B8AEA1 /* Assets.xcassets */; };
@@ -46,7 +45,6 @@
 		C74616911B4488A3BF6D9C4B /* Pods-AnycipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeTests/Pods-AnycipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D82950A61DD0FB0200B8AEA1 /* Anycipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anycipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82950A91DD0FB0200B8AEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D82950AB1DD0FB0200B8AEA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D82950AE1DD0FB0200B8AEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D82950B11DD0FB0200B8AEA1 /* Anycipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Anycipe.xcdatamodel; sourceTree = "<group>"; };
 		D82950B31DD0FB0200B8AEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 		D82950DC1DD1D69E00B8AEA1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D82950AB1DD0FB0200B8AEA1 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82950AC1DD0FB0200B8AEA1 /* ViewController.swift in Sources */,
 				D82950B21DD0FB0200B8AEA1 /* Anycipe.xcdatamodeld in Sources */,
 				D82950AA1DD0FB0200B8AEA1 /* AppDelegate.swift in Sources */,
 			);
