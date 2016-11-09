@@ -12,13 +12,13 @@
         <!--Мои продукты-->
         <scene sceneID="YzG-uh-ERj">
             <objects>
-                <tableViewController id="fe0-7v-utd" sceneMemberID="viewController">
+                <tableViewController id="fe0-7v-utd" customClass="MyProductsTableViewController" customModule="Anycipe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Vj-Wf-WpO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="pWj-Ka-TQb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myProductsCell" id="pWj-Ka-TQb">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWj-Ka-TQb" id="ij8-H3-oSY">
@@ -33,6 +33,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Мои продукты" id="7Hg-Cw-EST"/>
+                    <connections>
+                        <outlet property="MyProducts" destination="7Vj-Wf-WpO" id="fhs-Ao-mOK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGe-4N-UFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,13 +44,13 @@
         <!--Список покупок-->
         <scene sceneID="Jrd-dH-Ab4">
             <objects>
-                <tableViewController id="vuy-6K-Zt9" sceneMemberID="viewController">
+                <tableViewController id="vuy-6K-Zt9" customClass="ToDoTableViewController" customModule="Anycipe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZLR-BG-II1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" id="7gh-OG-Jm6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="toDoCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="7gh-OG-Jm6">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7gh-OG-Jm6" id="513-cQ-6j9">
@@ -62,6 +65,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Список покупок" id="yXY-cx-efP"/>
+                    <connections>
+                        <outlet property="ToDoTable" destination="ZLR-BG-II1" id="CGO-Kh-bNv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l90-na-xMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
