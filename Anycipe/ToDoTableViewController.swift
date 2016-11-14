@@ -14,30 +14,21 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     @IBOutlet var ToDoTable: UITableView!
     
     var dataArray = [String]()
+    var dataStrikethrough = [Bool]()
+    var dataLike = [Bool]()
     var filteredArray = [String]()
     var shouldShowSearchResults = false
     
     var searchController: UISearchController!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //ToDoTable.delegate = self
-        //ToDoTable.dataSource = self
         loadListOfProducts()
         configureSearchController()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Loads
     
@@ -46,11 +37,15 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
         let pathToFile = Bundle.main.path(forResource: "products", ofType: "txt")
         
         if let path = pathToFile {
-            // Load the file contents as a string.
             let countriesString = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
             
             // Append the countries from the string to the dataArray array by breaking them using the line change character.
             dataArray = countriesString.components(separatedBy: "\n")
+            for _ in dataArray {
+                dataStrikethrough.append(false)
+                dataLike.append(false)
+            }
+
             // Reload the tableview.
             ToDoTable.reloadData()
         }
@@ -86,9 +81,9 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     func updateSearchResults(for searchController: UISearchController) {
         let searchString = searchController.searchBar.text
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText: NSString = country as NSString
-            return (countryText.range(of: searchString!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+        filteredArray = dataArray.filter({ (product) -> Bool in
+            let productText: NSString = product as NSString
+            return (productText.range(of: searchString!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
         // Reload the tableview.
@@ -98,6 +93,18 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     
     // MARK: - Table view data source
 
+    func addGrad() {
+        let color1 = UIColor(displayP3Red: 153/255, green: 26/255, blue: 61/255, alpha: 0.5).cgColor
+        let color2 = UIColor(displayP3Red: 243/255, green: 155/255, blue: 51/255, alpha: 0.5).cgColor
+        let color3 = UIColor(displayP3Red: 35/255, green: 200/255, blue: 56/255, alpha: 0.5).cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = ToDoTable.bounds
+        gradientLayer.colors = [color1, color2, color3]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        ToDoTable.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -115,22 +122,58 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MGSwipeTableCell(style: UITableViewCellStyle.value1, reuseIdentifier: "toDoCell")
-        
         if shouldShowSearchResults {
-            cell.textLabel?.text = filteredArray[indexPath.row]
+            let textLabel = filteredArray[indexPath.row]
+            if dataStrikethrough[indexPath.row] {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: textLabel)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                attributeString.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.blue, range: NSMakeRange(0, attributeString.length))
+                cell.textLabel?.attributedText =  attributeString
+                cell.imageView?.image = UIImage(named: "swift")
+            }
+            else {
+                cell.textLabel?.attributedText = nil
+                cell.textLabel?.text = textLabel
+            }
             cell.detailTextLabel!.text = String(arc4random()) + " кг"
         }
         else {
-            cell.textLabel?.text = dataArray[indexPath.row]
+            let textLabel: String
+            if dataLike[indexPath.row] {
+                textLabel = "♥️ " + dataArray[indexPath.row]
+            }
+            else {
+                textLabel = "  " + dataArray[indexPath.row]
+            }
+            
+            if dataStrikethrough[indexPath.row] {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: textLabel)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                attributeString.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.blue, range: NSMakeRange(0, attributeString.length))
+                cell.textLabel?.attributedText =  attributeString
+                //cell.imageView?.image = UIImage(named: "swift")
+            }
+            else {
+                cell.textLabel?.attributedText = nil
+                cell.textLabel?.text = textLabel
+            }
             cell.detailTextLabel!.text = String(arc4random()) + " кг"
         }
-
-        //cell?.delegate = self //optional
         
         //configure left buttons
         cell.leftButtons = [
-                            MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.green),
-                            MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blue)
+                            MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.green, callback: {
+                                    (sender: MGSwipeTableCell!) -> Bool in
+                                    self.dataStrikethrough[indexPath.row] = true
+                                    self.ToDoTable.reloadData()
+                                    return true
+                                }),
+                            MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blue, callback: {
+                                    (sender: MGSwipeTableCell!) -> Bool in
+                                    self.dataLike[indexPath.row] = true
+                                    self.ToDoTable.reloadData()
+                                    return true
+                                })
                             ]
         cell.leftSwipeSettings.transition = MGSwipeTransition.clipCenter
         

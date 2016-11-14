@@ -19,6 +19,8 @@
 		D87231131DD3BBCD005D5386 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87231121DD3BBCD005D5386 /* ToDoTableViewController.swift */; };
 		D87231171DD3BEC1005D5386 /* products.txt in Resources */ = {isa = PBXBuildFile; fileRef = D87231161DD3BEC1005D5386 /* products.txt */; };
 		D872311B1DD3C5EE005D5386 /* MyProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872311A1DD3C5EE005D5386 /* MyProductsTableViewController.swift */; };
+		D872311F1DD494CB005D5386 /* ReceptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872311E1DD494CB005D5386 /* ReceptTableViewController.swift */; };
+		D87231211DD49E63005D5386 /* Recept.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87231201DD49E63005D5386 /* Recept.swift */; };
 		E1752BC1E050B3460D321F58 /* Pods_AnycipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		D87231121DD3BBCD005D5386 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		D87231161DD3BEC1005D5386 /* products.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = products.txt; sourceTree = "<group>"; };
 		D872311A1DD3C5EE005D5386 /* MyProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductsTableViewController.swift; sourceTree = "<group>"; };
+		D872311E1DD494CB005D5386 /* ReceptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceptTableViewController.swift; sourceTree = "<group>"; };
+		D87231201DD49E63005D5386 /* Recept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recept.swift; sourceTree = "<group>"; };
 		F2BFD0AD1B3A7A6DE7040096 /* Pods-Anycipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anycipe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe.debug.xcconfig"; sourceTree = "<group>"; };
 		F9DA3E228B5C9829C9BD6E0F /* Pods-AnycipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnycipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D82950B01DD0FB0200B8AEA1 /* Anycipe.xcdatamodeld */,
+				D87231201DD49E63005D5386 /* Recept.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			children = (
 				D87231121DD3BBCD005D5386 /* ToDoTableViewController.swift */,
 				D872311A1DD3C5EE005D5386 /* MyProductsTableViewController.swift */,
+				D872311E1DD494CB005D5386 /* ReceptTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -484,8 +490,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82950B21DD0FB0200B8AEA1 /* Anycipe.xcdatamodeld in Sources */,
+				D872311F1DD494CB005D5386 /* ReceptTableViewController.swift in Sources */,
 				D87231131DD3BBCD005D5386 /* ToDoTableViewController.swift in Sources */,
 				D82950AA1DD0FB0200B8AEA1 /* AppDelegate.swift in Sources */,
+				D87231211DD49E63005D5386 /* Recept.swift in Sources */,
 				D872311B1DD3C5EE005D5386 /* MyProductsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
