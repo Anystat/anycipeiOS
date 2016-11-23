@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 import ChameleonFramework
+import RealmSwift
+
+let uiRealm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +24,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Chameleon.setGlobalThemeUsingPrimaryColor(.flatCoffee,
                                                   withSecondaryColor: .flatNavyBlue,
                                                   andContentStyle: .contrast)
+        loadData()
         return true
+    }
+    
+    func loadData() {
+        let pathToFile = Bundle.main.path(forResource: "products", ofType: "txt")
+        if let path = pathToFile {
+            let arr = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            let dataArray = arr.components(separatedBy: "\n")
+            for item in dataArray {
+                let obj = ShoppingListItemModel()
+                obj.name = item
+                obj.quantity = randomDouble(min: 0.00, max: 100.00)
+                obj.unit = "кг"
+                try! uiRealm.write {
+                    uiRealm.add(obj, update: true)
+                }
+            }
+        }
+    }
+    
+    func randomDouble(min: Double, max: Double) -> Double {
+        return (Double(arc4random()) / 0xFFFFFFFF) * (max - min) + min
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

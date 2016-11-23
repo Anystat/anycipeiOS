@@ -22,28 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Copyright (c) 2016 Vitaly Kurotkin. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-SB-6bR">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Copyright (c) 2016 Vitaly Kurotkin. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-SB-6bR" userLabel="Copyright (c) 2016 Vitaly Kurotkin. All rights reserved.">
                                 <rect key="frame" x="8" y="626" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Anycipe" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="sJr-FC-Per">
-                                <rect key="frame" x="16" y="201" width="343" height="43"/>
+                                <rect key="frame" x="118" y="158" width="140" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uKW-BW-PJl">
+                                <rect key="frame" x="169" y="201" width="37" height="37"/>
+                                <color key="color" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.56465393304824829" green="0.45339596271514893" blue="0.35711643099784851" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cmc-SB-6bR" secondAttribute="bottom" constant="20" id="1YP-XH-gyA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sJr-FC-Per" secondAttribute="leading" id="2hT-ag-Y6B"/>
                             <constraint firstItem="cmc-SB-6bR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-8" id="N8q-TM-3yE"/>
+                            <constraint firstItem="uKW-BW-PJl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VMn-zB-K0i"/>
                             <constraint firstItem="sJr-FC-Per" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ydd-I1-VlX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sJr-FC-Per" secondAttribute="trailing" id="bDc-4F-JaV"/>
+                            <constraint firstItem="uKW-BW-PJl" firstAttribute="top" secondItem="sJr-FC-Per" secondAttribute="bottom" id="dcx-v2-SYJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cmc-SB-6bR" secondAttribute="trailing" constant="-8" id="eld-mT-nvo"/>
-                            <constraint firstItem="sJr-FC-Per" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="181" id="zmM-ow-Msp"/>
+                            <constraint firstItem="sJr-FC-Per" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="zmM-ow-Msp"/>
                         </constraints>
                     </view>
                 </viewController>
