@@ -9,6 +9,7 @@ PODS:
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
+  - Refresher (0.6.1)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - MGSwipeTableCell
   - RealmSwift
+  - Refresher
   - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -33,8 +35,9 @@ SPEC CHECKSUMS:
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
+  Refresher: 7c6f09ef3428aa921cb477611fb26bf29a9e5492
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 5e44942ee80a783788df21f96fb595d514e877c2
+PODFILE CHECKSUM: 0c5e95d747272019c38ffbec1c89f584cc05c7c7
 
 COCOAPODS: 1.1.1

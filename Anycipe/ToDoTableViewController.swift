@@ -9,6 +9,7 @@
 import UIKit
 import MGSwipeTableCell
 import RealmSwift
+import Refresher
 
 class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
@@ -22,6 +23,8 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureRefreshWithAction()
         configureSearchController()
     }
     
@@ -34,6 +37,17 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
     func reloadTable() {
         lists = lists.sorted(byProperty: "isFavorite", ascending: false)
         self.ToDoTable.reloadData()
+    }
+    
+    func configureRefreshWithAction() {
+        ToDoTable.addPullToRefreshWithAction {
+            OperationQueue().addOperation {
+                sleep(2)
+                OperationQueue.main.addOperation {
+                    self.tableView.stopPullToRefresh()
+                }
+            }
+        }
     }
     
     // MARK: - Search Controller
@@ -185,18 +199,6 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
                 self.reloadTable()
                 return true
         })
-        
-        let color1 = UIColor(displayP3Red: 153/255, green: 26/255, blue: 61/255, alpha: 1.0).cgColor
-        let color2 = UIColor(displayP3Red: 243/255, green: 155/255, blue: 51/255, alpha: 1.0).cgColor
-        let color3 = UIColor(displayP3Red: 35/255, green: 200/255, blue: 56/255, alpha: 1.0).cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = button.bounds
-        gradientLayer.colors = [color1, color2, color3]
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-        
-        button.layer.insertSublayer(gradientLayer, at: 0)
-        
         return button
     }
     
@@ -206,7 +208,7 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
             backgroundColor: UIColor.lightGray,
             callback: {
                 (sender: MGSwipeTableCell!) -> Bool in
-                
+                    self.showControllerWithMode(object: object)
                 return true
         })
         return button
@@ -250,15 +252,22 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
 
     
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetailToDo" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let controller = (segue.destination as! UINavigationController).topViewController as! ToDoDetailViewController
-                
-                controller.list = lists[indexPath.row]
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetailToDo" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let controller = (segue.destination as! UINavigationController).topViewController as! ToDoDetailViewController
+//                
+//                controller.list = lists[indexPath.row]
+//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftItemsSupplementBackButton = true
+//            }
+//        }
+//    }
+    
+    func showControllerWithMode(object: ShoppingListItemModel) {
+        if let pullToRefreshViewControler = self.storyboard?.instantiateViewController(withIdentifier: "ToDoDetailViewController") as? ToDoDetailViewController {
+            pullToRefreshViewControler.list = object
+            navigationController?.pushViewController(pullToRefreshViewControler, animated: true)
         }
     }
 

@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWj-Ka-TQb" id="ij8-H3-oSY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -54,12 +54,9 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7gh-OG-Jm6" id="513-cQ-6j9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="nwK-jk-DCT" kind="showDetail" identifier="showDetailToDo" id="Qrg-fH-ayF"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -79,7 +76,7 @@
         <!--To Do Detail View Controller-->
         <scene sceneID="EGB-4y-xZR">
             <objects>
-                <viewController id="31U-e9-6ry" customClass="ToDoDetailViewController" customModule="Anycipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ToDoDetailViewController" id="31U-e9-6ry" customClass="ToDoDetailViewController" customModule="Anycipe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yCd-bM-wBh"/>
                         <viewControllerLayoutGuide type="bottom" id="xpp-48-3fY"/>
@@ -87,13 +84,43 @@
                     <view key="view" contentMode="scaleToFill" id="3gC-Ja-wp9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Продукт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-ri-KsM">
+                                <rect key="frame" x="16" y="72" width="343" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.9212072491645813" green="0.84832113981246948" blue="0.62377804517745972" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOA-ri-h0U">
+                                <rect key="frame" x="16" y="133" width="180" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NX-ZU-lMp">
+                                <rect key="frame" x="204" y="133" width="63" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QRf-X4-nsO"/>
+                    <navigationItem key="navigationItem" id="QRf-X4-nsO">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="productName" destination="Clf-ri-KsM" id="FLw-62-W28"/>
+                        <outlet property="productQuantity" destination="QOA-ri-h0U" id="Ntm-Da-mf5"/>
+                        <outlet property="productUnit" destination="0NX-ZU-lMp" id="Wxt-tq-MH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBm-UL-T7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1999" y="-370"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="-370.16491754122939"/>
         </scene>
         <!--Recept Table View Controller-->
         <scene sceneID="Lx4-36-Lhh">
@@ -108,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDA-Mo-Cvz" id="cno-hg-C6D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="15.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -116,7 +143,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zrk-uH-NvI" id="ZTA-hf-lCQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
