@@ -34,19 +34,27 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
         reloadTable()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.ToDoTable.startPullToRefresh()
+    }
+    
     func reloadTable() {
         lists = lists.sorted(byProperty: "isFavorite", ascending: false)
         self.ToDoTable.reloadData()
     }
     
     func configureRefreshWithAction() {
-        ToDoTable.addPullToRefreshWithAction {
-            OperationQueue().addOperation {
-                sleep(2)
-                OperationQueue.main.addOperation {
-                    self.tableView.stopPullToRefresh()
+        if let customSubview = Bundle.main.loadNibNamed("RefresherView", owner: self, options: nil)?.first as? RefresherView {
+            ToDoTable.addPullToRefreshWithAction({
+                OperationQueue().addOperation {
+                    sleep(2)
+                    OperationQueue.main.addOperation {
+                        self.ToDoTable.stopPullToRefresh()
+                        self.reloadTable()
+                    }
                 }
-            }
+            }, withAnimator: customSubview)
         }
     }
     
@@ -96,6 +104,7 @@ class ToDoTableViewController: UITableViewController, UISearchResultsUpdating, U
 //            })
         
     }
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         print("=======> searchBarTextDidEndEditing")
     }

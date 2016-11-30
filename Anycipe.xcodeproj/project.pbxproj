@@ -23,6 +23,8 @@
 		D87231211DD49E63005D5386 /* Recept.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87231201DD49E63005D5386 /* Recept.swift */; };
 		D87426BA1DDA1318002AFD6E /* ShoppingListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87426B91DDA1318002AFD6E /* ShoppingListItemModel.swift */; };
 		D89D8BC31DE5C04200D5EF7B /* ToDoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89D8BC21DE5C04200D5EF7B /* ToDoDetailViewController.swift */; };
+		D8BC448E1DEB1D8500462ECA /* RefresherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC448D1DEB1D8500462ECA /* RefresherView.swift */; };
+		D8BC44901DEB1DEA00462ECA /* RefresherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8BC448F1DEB1DEA00462ECA /* RefresherView.xib */; };
 		E1752BC1E050B3460D321F58 /* Pods_AnycipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		D87231201DD49E63005D5386 /* Recept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recept.swift; sourceTree = "<group>"; };
 		D87426B91DDA1318002AFD6E /* ShoppingListItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListItemModel.swift; sourceTree = "<group>"; };
 		D89D8BC21DE5C04200D5EF7B /* ToDoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoDetailViewController.swift; sourceTree = "<group>"; };
+		D8BC448D1DEB1D8500462ECA /* RefresherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefresherView.swift; sourceTree = "<group>"; };
+		D8BC448F1DEB1DEA00462ECA /* RefresherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefresherView.xib; sourceTree = "<group>"; };
 		F2BFD0AD1B3A7A6DE7040096 /* Pods-Anycipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anycipe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anycipe/Pods-Anycipe.debug.xcconfig"; sourceTree = "<group>"; };
 		F9DA3E228B5C9829C9BD6E0F /* Pods-AnycipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnycipeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnycipeUITests/Pods-AnycipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5B4B108C6F002AF54E7333 /* Pods_AnycipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnycipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,8 @@
 				D82950AD1DD0FB0200B8AEA1 /* Main.storyboard */,
 				D82950B31DD0FB0200B8AEA1 /* Assets.xcassets */,
 				D82950B51DD0FB0200B8AEA1 /* LaunchScreen.storyboard */,
+				D8BC448D1DEB1D8500462ECA /* RefresherView.swift */,
+				D8BC448F1DEB1DEA00462ECA /* RefresherView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82950B71DD0FB0200B8AEA1 /* LaunchScreen.storyboard in Resources */,
+				D8BC44901DEB1DEA00462ECA /* RefresherView.xib in Resources */,
 				D82950B41DD0FB0200B8AEA1 /* Assets.xcassets in Resources */,
 				D82950AF1DD0FB0200B8AEA1 /* Main.storyboard in Resources */,
 				D87231171DD3BEC1005D5386 /* products.txt in Resources */,
@@ -500,6 +507,7 @@
 				D872311F1DD494CB005D5386 /* ReceptTableViewController.swift in Sources */,
 				D87231131DD3BBCD005D5386 /* ToDoTableViewController.swift in Sources */,
 				D82950AA1DD0FB0200B8AEA1 /* AppDelegate.swift in Sources */,
+				D8BC448E1DEB1D8500462ECA /* RefresherView.swift in Sources */,
 				D87231211DD49E63005D5386 /* Recept.swift in Sources */,
 				D89D8BC31DE5C04200D5EF7B /* ToDoDetailViewController.swift in Sources */,
 				D872311B1DD3C5EE005D5386 /* MyProductsTableViewController.swift in Sources */,

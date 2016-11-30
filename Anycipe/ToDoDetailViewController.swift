@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Refresher
 
 class ToDoDetailViewController: UIViewController {
     
@@ -15,7 +16,9 @@ class ToDoDetailViewController: UIViewController {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productQuantity: UILabel!
     @IBOutlet weak var productUnit: UILabel!
-    
+    @IBOutlet weak var productFavorit: UILabel!
+    @IBOutlet weak var productCheck: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,24 +34,48 @@ class ToDoDetailViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         productName.text = list.name
-        productQuantity.text = "\(list.quantity)"
+        productQuantity.text = "Количество: \(NSString(format: "%.1f", list.quantity))"
         productUnit.text = "\(list.unit)"
+        if list.isFavorite {
+            productFavorit.text = "♥️"
+        }
+        else {
+            productFavorit.text = ""
+        }
+        
+        
+        tableView.addPullToRefreshWithAction {
+            OperationQueue().addOperation {
+                sleep(2)
+                OperationQueue.main.addOperation {
+                    self.tableView.stopPullToRefresh()
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.startPullToRefresh()
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView!, cellForRowAtIndexPath indexPath: IndexPath!) -> UITableViewCell! {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "CellProductDetail")
+        cell.textLabel?.text = "Рецепт " + String(indexPath.row)
+//        if indexPath.row == 0 {
+//            cell.textLabel?.text = "Рецепты по продукту " + list.name
+//        }
+//        else {
+//            cell.textLabel?.text = "Row " + String(indexPath.row)
+//        }
+        return cell
+    }
 }
